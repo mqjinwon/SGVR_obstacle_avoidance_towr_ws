@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jin/workspace/catkin_ws/src/xpp/robots/xpp_hyq/build/devel/setup.sh

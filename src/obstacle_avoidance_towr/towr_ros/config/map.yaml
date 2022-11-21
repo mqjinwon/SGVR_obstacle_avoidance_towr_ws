@@ -1,0 +1,18 @@
+grid_map_topic: /sgvr/grid_map
+grid_map_visualizations:
+  - name: elevation_points
+    type: point_cloud
+    params:
+     layer: elevation
+  - name: elevation_grid
+    type: occupancy_grid
+    params:
+     layer: elevation
+     data_min: 0.08
+     data_max: -0.16
+  - name: elevation_cells
+    type: grid_cells
+    params:
+     layer: elevation
+     lower_threshold: -0.08
+     upper_threshold: 0.0

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: xpp_hyq
+Description: Description of xpp_hyq
+Version: 1.0.10
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
