@@ -1,3 +1,7 @@
 # ros
 devel
+build
 install
+logs
+
+.catkin_tools*

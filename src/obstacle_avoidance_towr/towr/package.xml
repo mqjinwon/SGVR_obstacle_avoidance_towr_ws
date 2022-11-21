@@ -21,6 +21,9 @@
 
   <depend>ifopt</depend>
   <depend>eigen</depend>
+  <depend>xpp_states</depend>
+  <depend>xpp_vis</depend>
+  <depend>xpp_msgs</depend>
   
   <!-- The following tags are recommended by REP-136 -->
   <exec_depend>catkin</exec_depend>

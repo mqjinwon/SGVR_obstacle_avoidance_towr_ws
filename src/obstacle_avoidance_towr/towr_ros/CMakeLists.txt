@@ -60,7 +60,10 @@ add_dependencies(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
-
+target_compile_options(${PROJECT_NAME}  PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 ## An example executable that runs TOWR
 add_executable(towr_ros_app 
@@ -73,7 +76,10 @@ target_link_libraries(towr_ros_app
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}
 )
-
+target_compile_options(towr_ros_app PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 ## Keyboard interfaces (ncurses)
 find_package(Curses REQUIRED)
@@ -87,7 +93,10 @@ target_link_libraries(towr_user_interface
   ${catkin_LIBRARIES}
   ${CURSES_LIBRARIES}
 )
-
+target_compile_options(towr_user_interface PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 # Display different terrains in rviz
 add_executable(rviz_terrain_publisher 
@@ -98,6 +107,10 @@ add_dependencies(rviz_terrain_publisher
 )
 target_link_libraries(rviz_terrain_publisher
   ${catkin_LIBRARIES}
+)
+target_compile_options(rviz_terrain_publisher PRIVATE
+  -O3
+  -mtune=native -g -flto
 )
 
 # Display obstacles in rviz - #21.11.15
@@ -110,6 +123,10 @@ add_dependencies(rviz_obs_sphere_publisher
 target_link_libraries(rviz_obs_sphere_publisher
   ${catkin_LIBRARIES}
 )
+target_compile_options(rviz_obs_sphere_publisher PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 # Display goal pose in rviz
 add_executable(goal_pose_publisher 
@@ -121,7 +138,10 @@ add_dependencies(goal_pose_publisher
 target_link_libraries(goal_pose_publisher
   ${catkin_LIBRARIES}
 )
-
+target_compile_options(goal_pose_publisher PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 # (Optional) to manipulate ROS bags
 add_executable(rosbag_traj_combiner 
@@ -130,13 +150,20 @@ add_executable(rosbag_traj_combiner
 target_link_libraries(rosbag_traj_combiner
   ${catkin_LIBRARIES}
 )
-
+target_compile_options(rosbag_traj_combiner PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 add_executable(rosbag_geom_msg_extractor 
   src/rosbag_geom_msg_extractor.cc
 )
 target_link_libraries(rosbag_geom_msg_extractor
   ${catkin_LIBRARIES}
+)
+target_compile_options(rosbag_geom_msg_extractor PRIVATE
+  -O3
+  -mtune=native -g -flto
 )
 
 #############

@@ -115,6 +115,10 @@ target_include_directories(${PROJECT_NAME}
     ${grid_map_core_INCLUDE_DIRS}
     ${grid_map_sdf_INCLUDE_DIRS}
 )
+target_compile_options(${PROJECT_NAME}  PRIVATE
+  -O3
+  -mtune=native -g -flto
+)
 
 #############
 ## Testing ##
